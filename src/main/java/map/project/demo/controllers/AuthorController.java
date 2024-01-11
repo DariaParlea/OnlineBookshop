@@ -4,6 +4,9 @@ import map.project.demo.entities.Author;
 import map.project.demo.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 
 import java.util.List;
 
@@ -18,9 +21,15 @@ public class AuthorController {
         this.authorService = authorService;
     }
 
+//    @GetMapping
+//    public List<Author> getAllAuthors() {
+//        return authorService.getAllAuthors();
+//    }
+
     @GetMapping
     public List<Author> getAllAuthors() {
-        return authorService.getAllAuthors();
+        List<Author> authors =  authorService.getAllAuthors();
+        return new ResponseEntity<>(authors, HttpStatus.OK).getBody();
     }
 
     @GetMapping("/{AuthorID}")
@@ -28,10 +37,11 @@ public class AuthorController {
         return authorService.getAuthorById(AuthorID).orElse(null);
     }
 
-    @GetMapping("/FirstName, LastName")
-    public Author getAuthorByName(@RequestParam String FirstName, @RequestParam String LastName) {
-        return authorService.getAuthorByName(FirstName, LastName);
+    @GetMapping("/byName")
+    public Author getAuthorByName(@RequestParam String firstName, @RequestParam String lastName) {
+        return authorService.getAuthorByName(firstName, lastName);
     }
+
 
 
     @PostMapping

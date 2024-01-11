@@ -1,6 +1,5 @@
 package map.project.demo.entities;
 
-//import javax.persistence.*;
 import jakarta.persistence.*;
 @Entity
 @AttributeOverride(name = "id", column = @Column(name = "authorId"))
@@ -10,9 +9,9 @@ public class Author extends Person {
 
     protected Author(){}
 
-    public Author(String firstName, String lastName, String birthDate, String address, int authorId) {
+    public Author(String firstName, String lastName, String birthDate, String address, int author_id) {
         super( firstName, lastName, birthDate, address);
-        this.id = authorId;
+        this.id = author_id;
     }
 
 

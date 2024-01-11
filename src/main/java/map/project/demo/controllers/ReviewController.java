@@ -9,7 +9,7 @@ import map.project.demo.entities.Patterns.Singelton.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/Reviews")
+@RequestMapping("/api/review")
 public class ReviewController implements ReviewControllerSingelton {
 
     private static ReviewController instance;
