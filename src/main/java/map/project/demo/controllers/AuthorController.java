@@ -21,15 +21,9 @@ public class AuthorController {
         this.authorService = authorService;
     }
 
-//    @GetMapping
-//    public List<Author> getAllAuthors() {
-//        return authorService.getAllAuthors();
-//    }
-
     @GetMapping
     public List<Author> getAllAuthors() {
-        List<Author> authors =  authorService.getAllAuthors();
-        return new ResponseEntity<>(authors, HttpStatus.OK).getBody();
+        return authorService.getAllAuthors();
     }
 
     @GetMapping("/{AuthorID}")

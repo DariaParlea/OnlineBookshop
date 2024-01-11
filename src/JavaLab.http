@@ -1,0 +1,93 @@
+# JavaLab
+
+###
+# @name Category_get_all
+GET http://localhost:8080/api/Category
+
+###
+# @name Author_get_all
+GET http://localhost:8080/Author
+
+###
+# @name Author_get_by_id
+GET http://localhost:8080/Author/{{AuthorID}}
+
+###
+# @name Author_get_by_name
+GET http://localhost:8080/Author/byName
+
+###
+# @name Author_save
+POST http://localhost:8080/Author
+
+###
+# @name Author_delete
+DELETE http://localhost:8080/Author/{{AuthorID}}
+
+###
+# @name Category_get_by_id
+GET http://localhost:8080/api/Category/{{CategoryID}}
+
+###
+# @name Category_create
+POST http://localhost:8080/api/Category
+
+###
+# @name Category_update
+PUT http://localhost:8080/api/Category/{{CategoryID}}
+
+###
+# @name Category_delete
+DELETE http://localhost:8080/api/Category/{{CategoryID}}
+
+###
+# @name Orders_get_all
+GET http://localhost:8080/Orders
+
+###
+# @name Orders_get_by_id
+GET http://localhost:8080/Orders/{{OrderID}}
+
+###
+# @name Orders_save
+POST http://localhost:8080/Orders
+
+###
+# @name Orders_delete
+DELETE http://localhost:8080/Orders/{{OrderID}}
+
+###
+# @name Review_get_all
+GET http://localhost:8080/api/review
+
+###
+# @name Review_get_by_id
+GET http://localhost:8080/api/review/{{ReviewId}}
+
+###
+# @name Review_create
+POST http://localhost:8080/api/review
+
+###
+# @name Review_update
+PUT http://localhost:8080/api/review/{{ReviewId}}
+
+###
+# @name Review_delete
+DELETE http://localhost:8080/api/review/{{ReviewId}}
+
+###
+# @name Books_get_all
+GET http://localhost:8080/Books
+
+###
+# @name Books_get_by_id
+GET http://localhost:8080/Books/{{BookId}}
+
+###
+# @name Books_save
+POST http://localhost:8080/Books
+
+###
+# @name Books_delete
+DELETE http://localhost:8080/Books/{{BookId}}
